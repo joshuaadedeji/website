@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        
+            <title>How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript</title>
+        
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+            <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;700&display=swap">
+        
+
+        
+        
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.css"></noscript>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+    href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css" />
+<noscript><link rel="stylesheet" href="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.css"></noscript>
+
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-unescaped-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup-templating.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-bash.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-c.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-clojure.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-cpp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-csharp.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-css.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-docker.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-elixir.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-erlang.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-git.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-go.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-graphql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-haskell.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-java.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-javascript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-json.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-jsx.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-julia.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-kotlin.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-lua.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-markup.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-php.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-python.min.js"></script>
+<script defer type="text/javascript" src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-r.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-ruby.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-rust.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-scala.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-sql.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-swift.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-typescript.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-yaml.min.js"></script>
+<script defer type="text/javascript"
+    src="https://cdn.freecodecamp.org/news-assets/prism-1-16-0/prism-dart.min.js"></script>
+
+
+
+        
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-26e2f3cde9.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-5a4f9d5c91.css" />
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-124f5f949c.css" />
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+        
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",(()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")})),document.addEventListener("DOMContentLoaded",(()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",(e=>{i=e.target.value})),o.addEventListener("submit",(e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()}));const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No tutorials found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",((e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)}));document.addEventListener("click",(e=>{e.target!==s&&l.autocomplete.close()}))})),document.addEventListener("DOMContentLoaded",(()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")}));const isAuthenticated=document.cookie.split(";").some((e=>e.trim().startsWith("jwt_access_token="))),isDonor=document.cookie.split(";").some((e=>e.trim().startsWith("isDonor=true")));</script>
+
+        
+        
+    
+        <script
+            data-ad-client="ca-pub-9482786369113753"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            crossorigin="anonymous"
+            async
+        ></script>
+        <script data-test-label="toggle-ad-layout" defer src="/news/assets/js/toggle-ad-layout-099254b065.js"></script>
+    
+
+
+        
+        
+    <script defer src="/news/assets/js/fitvids-5d12072cbf.js"></script>
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelector(".post-full-content");t&&fitVids(t)}));</script>
+
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+
+        
+    <link rel="amphtml" href="https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/amp/">
+    <meta name="description" content="Everyone needs websites and web applications these days. So there are many opportunities for you if you work as a web developer. But if you want to get a web developer job, you&#39;ll need a good portfolio website to showcase your skills and experience. In this tutorial, I&#39;ll discuss some">
+
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript">
+    
+        <meta property="og:description" content="Everyone needs websites and web applications these days. So there are many opportunities for you if you work as a web developer. But if you want to get a web developer job, you&#39;ll need a good portfolio website to showcase your skills and experience. In this tutorial, I&#39;ll discuss some">
+    
+    <meta property="og:url" content="https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/">
+    <meta property="og:image" content="https://www.freecodecamp.org/news/content/images/2021/09/responsive-web-design.png">
+    <meta property="article:published_time" content="2021-10-04T20:59:10.000Z">
+    <meta property="article:modified_time" content="2022-01-24T22:03:07.000Z">
+    
+        <meta property="article:tag" content="Portfolio">
+    
+        <meta property="article:tag" content="Projects">
+    
+        <meta property="article:tag" content="Self Improvement">
+    
+        <meta property="article:tag" content="Job Hunting">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+    
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript">
+    
+        <meta name="twitter:description" content="Everyone needs websites and web applications these days. So there are many opportunities for you if you work as a web developer. But if you want to get a web developer job, you&#39;ll need a good portfolio website to showcase your skills and experience. In this tutorial, I&#39;ll discuss some">
+    
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/">
+    <meta name="twitter:image" content="https://www.freecodecamp.org/news/content/images/2021/09/responsive-web-design.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Kolade Chris">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Portfolio, Projects, Self Improvement, Job Hunting">
+    <meta name="twitter:site" content="@freecodecamp">
+    
+        <meta name="twitter:creator" content="@ksound22">
+    
+
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Article",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"image": {
+		"@type": "ImageObject",
+		"url": "https://www.freecodecamp.org/news/content/images/2021/09/responsive-web-design.png",
+		"width": 600,
+		"height": 400
+	},
+	"url": "https://www.freecodecamp.org/news/how-to-build-a-developer-portfolio-website/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"datePublished": "2021-10-04T20:59:10.000Z",
+	"dateModified": "2022-01-24T22:03:07.000Z",
+	"keywords": "Portfolio, Projects, Self Improvement, Job Hunting",
+	"description": "Everyone needs websites and web applications these days. So there are many\nopportunities for you if you work as a web developer.\n\nBut if you want to get a web developer job, you&#x27;ll need a good portfolio website\nto showcase your skills and experience.\n\nIn this tutorial, I&#x27;ll discuss some of the main reasons why you should make a\nportfolio website for yourself. Then, I&#x27;ll walk you through how to build your\nown fully responsive portfolio website with HTML, CSS, and JavaScript.\n\nTable of Content\n * ",
+	"headline": "How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript",
+	"author": {
+		"@type": "Person",
+		"name": "Kolade Chris",
+		"url": "https://www.freecodecamp.org/news/author/kolade/",
+		"sameAs": [
+			"http://ksound22.github.io",
+			"https://twitter.com/ksound22"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://www.freecodecamp.org/news/content/images/2023/01/kolade-recent.jpg",
+			"width": 400,
+			"height": 400
+		}
+	}
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+<!-- Web Monetization (https://webmonetization.org/) -->
+<meta name="monetization" content="$ilp.uphold.com/LJmbPn7WD4JB">
+<!-- end Web Monetization -->
+
+<!-- dataLayer setup -->
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- End dataLayer setup -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+<!-- End Google Tag Manager -->
+
+
+<meta name="google-site-verification" content="b4tITLzEeeZGEpvD4mGNf3khKM4fvqejQaz9SYBQP8E" />
+
+        
+    </head>
+    
+    
+        <body class="home-template">
+    
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        
+<form id="search-form" data-test-label="search-bar">
+    <div role="search" class="searchbox__wrapper">
+        <label class="fcc_sr_only" for='search-input'>
+            Search
+        </label>
+        <input type="search" placeholder="
+    Search 9,500+ tutorials
+" id="search-input" />
+        <button type="submit" class="ais-SearchBox-submit">
+            <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z" />
+</svg>
+
+            <span class="fcc_sr_only">Submit your search query</span>
+        </button>
+        <div id='dropdown-container'></div>
+    </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news" data-test-label="site-nav-logo"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org" /></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a
+                class="nav-forum"
+                id="nav-forum"
+                rel="noopener noreferrer"
+                href="https://forum.freecodecamp.org/"
+                target="_blank"
+                data-test-label="forum-button"
+            >Forum</a>
+            <a
+                class="toggle-button-nav"
+                id="nav-donate"
+                rel="noopener noreferrer"
+                href="https://www.freecodecamp.org/donate/"
+                target="_blank"
+                data-test-label="donate-button"
+            >Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank">
+    <p id="banner-text"></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");isAuthenticated?(t.innerHTML="Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href="https://www.freecodecamp.org/donate",e.setAttribute("text-variation","authenticated")):isDonor?(t.innerHTML="Thank you for supporting freeCodeCamp through <span>your donations</span>.",e.href="https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/",e.setAttribute("text-variation","donor")):(t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default"))}));</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <main id="site-main" class="post-template site-main outer">
+        <div class="inner ad-layout">
+            <article class="post-full post ">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <time class="post-full-meta-date" datetime="Mon Oct 04 2021 20:59:10 GMT+0000 (Coordinated Universal Time)">
+                            October 4, 2021
+                        </time>
+                        
+                            <span class="date-divider">/</span>
+                            <a  dir="ltr" href="/news/tag/portfolio/">
+                                #Portfolio
+                            </a>
+                        
+                    </section>
+                    <h1 class="post-full-title">How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript</h1>
+                </header>
+                <div class="post-full-author-header" data-test-label="author-header-no-bio">
+                    
+                        
+                            
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2023/01/kolade-recent.jpg 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2023/01/kolade-recent.jpg"
+      class="author-profile-image"
+      alt="Kolade Chris"
+      width="400"
+      height="400"
+      onerror="this.style.display='none'"
+      
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content author-card-content-no-bio">
+            <span class="author-card-name">
+                <a href="/news/author/kolade/" data-test-label="profile-link">
+                    
+                        Kolade Chris
+                    
+                </a>
+            </span>
+            
+        </section>
+    </section>
+
+                        
+                    
+                </div>
+                
+                    <figure class="post-full-image">
+                        
+    <picture>
+      <source
+        media="(max-width: 700px)"
+        sizes="1px"
+        srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 1w"
+      />
+      <source 
+        media="(min-width: 701px)"
+        sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+        srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/09/responsive-web-design.png 300w,https://www.freecodecamp.org/news/content/images/size/w600/2021/09/responsive-web-design.png 600w,https://www.freecodecamp.org/news/content/images/size/w1000/2021/09/responsive-web-design.png 1000w,https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/responsive-web-design.png 2000w"
+      />
+      <img
+        onerror="this.style.display='none'"
+        src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/responsive-web-design.png"
+        alt="How to Build Your Own Developer Portfolio Website with HTML, CSS, and JavaScript",
+        width="600"
+        height="400"
+      >
+    </picture>
+  
+                    </figure>
+                
+                <section class="post-full-content">
+                    <div class="post-and-sidebar">
+                        <section class="post-content ">
+                            
+<p>Everyone needs websites and web applications these days. So there are many opportunities for you if you work as a web developer.</p>
+<p>But if you want to get a web developer job, you'll need a good portfolio website to showcase your skills and experience.</p>
+<p>In this tutorial, I'll discuss some of the main reasons why you should make a portfolio website for yourself. Then, I'll walk you through how to build your own fully responsive portfolio website with HTML, CSS, and JavaScript.</p>
+<h2 id="tableofcontent">Table of Content</h2>
+<ul>
+<li><a href="#whatisadeveloperportfoliowebsite">What is a Developer Portfolio Website?</a></li>
+<li><a href="#whyyoushouldhaveaportfoliowebsite">Why you should have a Portfolio Website</a></li>
+<li><a href="#portfolioprojecthowtobuildyourownonlinedeveloperportfolio">Portfolio Project – How to Build Your Own Online Developer Portfolio</a></li>
+<li><a href="#theprojectfolderstructure">The Project Folder Structure</a></li>
+<li><a href="#thebasichtmlboilerplate">The Basic HTML Boilerplate</a></li>
+<li><a href="#thenavbarsection">The Navbar Section</a></li>
+<li><a href="#howtostylethenavbar">How to Style the Navbar</a></li>
+<li><a href="#howtobuildtheherosection">How to Build the Hero Section</a></li>
+<li><a href="#howtostyletheherosection">How to Style the Hero Section</a></li>
+<li><a href="#howtobuildthemoreaboutmesection">How to Build the More About Me Section</a></li>
+<li><a href="#howtobuildtheskillssection">How to Build the Skills Section</a></li>
+<li><a href="#howtostyletheskillssection">How to Style the Skills Section</a></li>
+<li><a href="#howtobuildtheprojectssection">How to Build the Projects Section</a></li>
+<li><a href="#howtostyletheprojectsection">How to Style the Project Section</a></li>
+<li><a href="#howtobuildthecontactsection">How to Build the Contact Section</a></li>
+<li><a href="#howtostylethecontactsection">How to Style the Contact Section</a></li>
+<li><a href="#howtostylethesocialicons">How to Style the Social Icons</a></li>
+<li><a href="#howtoaddthescrolltotopbutton">How to Add the Scroll to Top Button</a></li>
+<li><a href="#thehtmlforthescrolltotopbutton">The HTML for the Scroll to Top Button</a></li>
+<li>H<a href="#howtostylethescrolltotopicon">ow to Style the Scroll to Top Icon</a></li>
+<li><a href="#howtomakeyourportfoliowebsiteresponsive">How to Make Your Portfolio Website Responsive</a></li>
+<li><a href="#howtocreatethemediaqueryfortabletsandmobilephonesmaxwidth720px">How to Create the Media Query for Tablets and Mobile Phones (max-width 720px)</a></li>
+<li><a href="#howtobuildthehamburgermenu">How to Build the Hamburger Menu</a></li>
+<li><a href="#thejavascriptforthehamburgermenu">The JavaScript for the Hamburger Menu</a></li>
+<li><a href="#howtomaketheherosectionresponsive">How to Make the Hero Section Responsive</a></li>
+<li><a href="#howtomakethemoreaboutmesectionresponsive">How to Make the More About Me Section Responsive</a></li>
+<li><a href="#howtomaketheskillssectionresponsive">How to Make the Skills Section Responsive</a></li>
+<li><a href="#howtomaketheprojectssectionresponsive">How to Make the Projects Section Responsive</a></li>
+<li><a href="#howtomakethecontactformresponsive">How to Make the Contact Form Responsive</a></li>
+<li><a href="#howtomakethewebsiteresponsiveonsmallphones">How to Make the Website Responsive on Small Phones</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="whatisadeveloperportfoliowebsite">What is a Developer Portfolio Website?</h2>
+<p>A developer portfolio website provides relevant information to potential employers about your skills, experience, and projects you've worked on.</p>
+<p>You can consider your portfolio website to be your online résumé.</p>
+<h2 id="whyyoushouldhaveaportfoliowebsite">Why you should have a Portfolio Website</h2>
+<h3 id="1aportfoliowebsiteincreasesyouronlinepresence">1. A Portfolio Website Increases Your Online Presence</h3>
+<p>As a developer, you need an online presence. You can cultivate this online presence on social media platforms such as Twitter, Facebook, and Instagram.  But those are not entirely your own, as the moderators of those platforms have almost full control over your account.</p>
+<p>With your own portfolio website, it's live on your own domain online. And people can easily find you when they search for your name on a search engine like Google, provided you put the right things in place when it comes to SEO.</p>
+<h3 id="2aportfoliowebsiteisyouronlinersum">2. A portfolio website is your online résumé</h3>
+<p>Your portfolio website is like your online résumé. Potential clients and hiring managers can easily find you online and check out your previous projects and skills.</p>
+<p>This also means that when anyone wants to give you an opportunity to work for them, and they ask for your previous projects, you just give them one link to your website (your portfolio). It not only has your projects but your skillset and information about your past experience as well.</p>
+<h3 id="3aportfoliowebsiteshowsevidenceofexpertiseinyourfield">3. A Portfolio Website Shows Evidence of Expertise in your Field</h3>
+<p>Having (let alone building you own) portfolio website as a developer sends out a clear message that you're putting your skills into practice and that you know what you are doing.</p>
+<p>A portfolio can also help build trust with clients because they have direct evidence of the quality of your work.</p>
+<h2 id="portfolioprojecthowtobuildyourownonlinedeveloperportfolio">Portfolio Project – How to Build Your Own Online Developer Portfolio</h2>
+<p>You can make a cool portfolio website for yourself with HTML, CSS, and JavaScript. And that’s what we are going to do here.</p>
+<p>I already did this some months ago and made it available to everyone as a free product on Gumroad, so I decided to create a tutorial on how I got it done.</p>
+<p>This is the <a href="https://eager-williams-af0d00.netlify.app/?">live demo</a> of what we will be building.</p>
+<p>To follow along with me, you can grab the starter files from <a href="https://github.com/Ksound22/developer-portfolio/tree/starter">Github</a>.</p>
+<h3 id="theprojectfolderstructure">The Project Folder Structure</h3>
+<p>To avoid confusion, I will be arranging the HTML, CSS, JavaScript, icons, and images of the project in their respective folders.</p>
+<p>The HTML file goes in the root folder, and the image, icon, CSS, and JavaScript files will be in their separate subfolders in an asset folder. This is a common practice.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss1.png" alt="ss1" width="600" height="400" loading="lazy"></p>
+<p>There is also a readme file containing all the tools I used in the project, with their respective links. It's available in the starter files.</p>
+<h3 id="thebasichtmlboilerplate">The Basic HTML Boilerplate</h3>
+<p>Everyone has their preferences when coding out a whole project with HTML, CSS, and JavaScript. Some like to define the whole HTML boilerplate first and then the CSS later, but I like to do everything section by section.</p>
+<p>So, I will be starting with the navbar section. But it’s good to show what the basic HTML boilerplate looks like first:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+
+    &lt;!--CSS Styles --&gt;
+    &lt;link rel="stylesheet" href="assets/css/styles.css" /&gt;
+
+    &lt;!-- Favicons --&gt;
+    &lt;link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    /&gt;
+    &lt;link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    /&gt;
+
+    &lt;!-- Animate CSS CDN --&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    /&gt;
+    &lt;title&gt;Jane Doe | Web Developer&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;!-- Navbar --&gt;
+
+    &lt;!-- Hero Section --&gt;
+
+    &lt;!-- More about --&gt;
+
+    &lt;!-- Skills section --&gt;
+
+    &lt;!-- Projects section --&gt;
+
+    &lt;!-- Contact section --&gt;
+
+    &lt;!-- Social accounts - Fixed to the right --&gt;
+
+    &lt;!-- Scroll to top --&gt;
+
+    &lt;!-- Footer section --&gt;
+
+    &lt;!-- Website scripts --&gt;
+    &lt;script src="assets/js/app.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Ion icons scripts --&gt;
+    &lt;script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    &gt;&lt;/script&gt;
+    &lt;script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    &gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>I have all the sections in the HTML commented out so you can follow along better. In the boilerplate there are also the CDNs for animate CSS (A CSS animation library), and Ionic icons, the icon library I chose for the project.</p>
+<p>I have a favicon made through Favicon IO and linked it in the head section. Favicon is the little image that shows on a browser tab.</p>
+<h3 id="thenavbarsection">The Navbar Section</h3>
+<p>The Navbar section contains the simple logo of <code>h1</code> text, and the nav menu:</p>
+<pre><code class="language-html"> &lt;nav&gt;
+      &lt;h1&gt;JANE DOE&lt;/h1&gt;
+      &lt;ul class="navigation"&gt;
+        &lt;li&gt;&lt;a href="#about" class="nav-link"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#skills" class="nav-link"&gt;Skills&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#projects" class="nav-link"&gt;Projects&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact" class="nav-link"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;button class="burger-menu" id="burger-menu"&gt;
+        &lt;ion-icon class="bars" name="menu-outline"&gt;&lt;/ion-icon&gt;
+      &lt;/button&gt;
+&lt;/nav&gt;
+</code></pre>
+<p>If you are wondering what the button element represents, it’s the bars for toggling the nav menu on mobile (a hamburger menu). This will be hidden on desktop but shown on mobile.</p>
+<p>I will also be linking the individual sections of the website to these nav items, so when the user clicks on any of the nav items, they are taken to the section that corresponds to the nav item they click.</p>
+<p>That’s why I have the hyperlink reference (<code>href</code>) attributes set to <code>#about</code>, <code>#skills</code>, <code>#projects</code>, and <code>#contacts</code>, respectively. The individual section of the website will have these attributes as ids.</p>
+<p>The navbar now looks like this:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss2.png" alt="ss2" width="1280" height="767" loading="lazy"></p>
+<h3 id="howtostylethenavbar">How to Style the Navbar</h3>
+<p>The navbar definitely needs some styling to make it look a bit nicer.</p>
+<p>Before styling the navbar properly, I will be declaring some CSS variables to make things easier later. This is because, with CSS variables, it is easier to avoid redundancy and repetition in your CSS file.</p>
+<p>The syntax for declaring CSS variables looks like this:</p>
+<pre><code class="language-css">:root {
+  --variable-name: value;
+}
+</code></pre>
+<p>To use the variable, you do this:</p>
+<pre><code class="language-css">selector {
+  property: var(--variable-name);
+}
+</code></pre>
+<p>I will also import the Roboto font from Google, and declare some CSS resets to remove some default features such as margin and padding for elements, <code>text-decoration</code> for anchor tags, and <code>list-style-type</code> for lists.</p>
+<pre><code class="language-css">@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&amp;display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+</code></pre>
+<p>If you notice, I set a hover state for all links on the website from line 39 to 41. When the user hovers on any link, it changes to the secondary color I set in the CSS variables.</p>
+<p>Here's a good rule of thumb for declaring CSS variables: if you find yourself using the same property and value often in the same CSS file, you should declare a variable for it to avoid repetition.</p>
+<p>You should also make your variable names are as descriptive as possible, like I did, in order to help others who might work with your code.</p>
+<p>With the resets, there are some changes to the navbar in the browser:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss3.png" alt="ss3" width="600" height="400" loading="lazy"></p>
+<p>To style the navbar and align the content in it, I will be using CSS Flexbox:</p>
+<pre><code class="language-css">nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+</code></pre>
+<p><strong>What's the CSS above doing?</strong></p>
+<p>I made the navbar sticky with the position property, so it remains at the top no matter what.</p>
+<p>The <code>z-index</code> property with the value of 1 makes sure the navbar displays over any other element on the web page. That's how you make a sticky navbar.</p>
+<p>In addition, I also applied a shadow to the bottom of the navbar with the <code>box-shadow</code> property.</p>
+<p>The navbar has a new look:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss4.png" alt="ss4" width="600" height="400" loading="lazy"></p>
+<p>But we're not finished yet. The nav menu items need to be side by side, not on top of each other. I will be doing that with Flexbox too.</p>
+<p>I will also finish up the rest of the navbar styling by making the h1, nav items, and the hamburger menu button look nicer. I'll do this with some CSS variables initially declared.</p>
+<pre><code class="language-css">nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+</code></pre>
+<p>The hamburger menu bar also needs to be hidden. It has a class of <code>.burger-menu</code>, so we can set a display of none with it and also make the button look better.</p>
+<pre><code class="language-css">.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+</code></pre>
+<p>Our navbar looks way nicer now:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss5.png" alt="ss5" width="600" height="400" loading="lazy"></p>
+<h3 id="howtobuildtheherosection">How to Build the Hero Section</h3>
+<p>The next section we'll work on is the hero section. This won’t take quite as much work as the navbar.</p>
+<p>The HTML boilerplate for the hero section is in the code snippet below:</p>
+<pre><code class="language-html">&lt;section class="hero" id="about"&gt;
+      &lt;img
+        src="assets/images/wfh_1.svg"
+        alt="jane-doe"
+        loading="lazy"
+        class="hero-img"
+      /&gt;
+      &lt;div class="bio animate__animated animate__shakeX"&gt;
+        &lt;h2 class="bio-title"&gt;About Me&lt;/h2&gt;
+        &lt;p class="bio-text"&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+          dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+          inventore tempore minus nemo, iste ullam illo laboriosam maiores
+          repudiandae quos!
+        &lt;/p&gt;
+      &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<p>The only thing that's a bit strange are the classes of <code>animate__animated animate__shakeX</code> attached to the div containing the <code>About Me</code> text. The class names are from animate CSS and they serve to animate the About Me text  container.</p>
+<p>With this, the website gets a new look:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss6.png" alt="ss6" width="1280" height="768" loading="lazy"></p>
+<h3 id="howtostyletheherosection">How to Style the Hero Section</h3>
+<p>Flexbox will come to the rescue once again! This section has two major sets of content – an image and text in a div. So we can use flexbox to display them side by side. You can see how it works in the CSS code snippet below:</p>
+<pre><code class="language-css">.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+</code></pre>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss7.png" alt="ss7" width="600" height="400" loading="lazy"></p>
+<p>Our Jane Doe image is too big, so we need to reduce its width and height.<br>
+We also need to style the bio text (About Me text) for readability too. The CSS variables initially declared will be very instrumental here.</p>
+<pre><code class="language-css">.hero img {
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+</code></pre>
+<p>The hero section now looks beautiful:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss8.png" alt="ss8" width="600" height="400" loading="lazy"></p>
+<h3 id="howtobuildthemoreaboutmesection">How to Build the More About Me Section</h3>
+<p>I included this section to include some more information about Jane Doe with some placeholder text.</p>
+<p>You can take advantage of this to include information you were unable to put in the About Me section.</p>
+<p>The HTML boilerplate for this section is quite short and simple:</p>
+<pre><code class="language-html">    &lt;section class="more-about"&gt;
+      &lt;h2&gt;More About Me&lt;/h2&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum,
+        autem deleniti cupiditate molestias quis unde quae totam porro dicta
+        iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus
+      &lt;/p&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+        nostrum dolor minus, libero delectus praesentium perferendis
+      &lt;/p&gt;
+      &lt;p&gt;
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero,
+        consequuntur labore? Ea totam voluptas amet!
+      &lt;/p&gt;
+    &lt;/section&gt;
+</code></pre>
+<p>The CSS is straightforward as well. All we'll do is set a <code>background-color</code> with the <code>--bg-color</code> CSS variable, make the section readable by setting the padding, margin, line-height, and aligning the h2 text to the center:</p>
+<pre><code class="language-css">.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+</code></pre>
+<p>In the browser, the More About section looks like this:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss9.png" alt="ss9" width="600" height="400" loading="lazy"></p>
+<h3 id="howtobuildtheskillssection">How to Build the Skills Section</h3>
+<p>From the live demo, you'll see that the skills section contains relevant skills such as HTML, CSS, JavaScript, and so on. I was able to get the icons of those languages as SVGs from Icons8.</p>
+<p>The HTML boilerplate for this section is in the code snippet below:</p>
+<pre><code class="language-html"> &lt;section class="skills" id="skills"&gt;
+      &lt;h2 class="skill-header"&gt;My Top Skills&lt;/h2&gt;
+
+      &lt;div class="skills-wrapper"&gt;
+        &lt;div class="first-set animate__animated animate__pulse"&gt;
+          &lt;img
+            src="assets/icons/icons8-html-5.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+          &lt;img
+            src="assets/icons/icons8-css3.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+          &lt;img
+            src="assets/icons/icons8-javascript.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div class="second-set animate__animated animate__pulse"&gt;
+          &lt;img
+            src="assets/icons/icons8-bootstrap.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+          &lt;img
+            src="assets/icons/icons8-react-native.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+          &lt;img
+            src="assets/icons/icons8-git.svg"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+</code></pre>
+<p>There are six icons in total. And instead of having to align them with Flexbox, I grouped them in two places (3 teach), with the classes of first-set and second-set, so they stay on top of each other. This means that the stylings we'll apply will be more readable. Easy!</p>
+<p>Notice that I’ve been attaching the loading attribute to the individual icons and images and setting it to lazy. This will make sure that the images are loaded only when the user scrolls to the sections containing them. This will subsequently speed up load time, because only what is needed will be loaded.</p>
+<h3 id="howtostyletheskillssection">How to Style the Skills Section</h3>
+<p>Without styling, the skills section looks like this:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss10edited.jpg" alt="ss10edited" width="600" height="400" loading="lazy"></p>
+<p>We should style the section a little bit because it doesn’t look good enough yet:</p>
+<pre><code class="language-css">.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+</code></pre>
+<p>In the CSS above, I defined a maximum width for the whole section to push things to the center for a better user experience.</p>
+<p>Other stylings we applied relate to clarity and readability. For example, I increased the size of the icons to make them more visible with the width and height properties. I also applied a padding of 1rem (16 pixels) to all the icons to push them apart from each other a little bit.</p>
+<p>The skills section now looks cool:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss11.png" alt="ss11" width="600" height="400" loading="lazy"></p>
+<p>Still, I think the section can be better, so I have decided to make some more tweaks with the box-shadow property.</p>
+<p>Remember from the HTML that there is a class attribute called <code>.icon-card</code> attached to all the icons. I will be using the class name to put all the icons in a card:</p>
+<pre><code class="language-css">.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+</code></pre>
+<p>The skills section looks a lot better:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss12.png" alt="ss12" width="600" height="400" loading="lazy"><br>
+Look at that!</p>
+<h3 id="howtobuildtheprojectssection">How to Build the Projects Section</h3>
+<p>One of the major purposes of a portfolio website is to show off your projects. So we'll need to build a section to showcase projects you've worked on in the past.</p>
+<p>This section is probably the most tedious to style, but Flexbox won’t stop being our friend.</p>
+<p>The HTML for this section is in the code snippet below:</p>
+<pre><code class="language-html">&lt;section class="projects" id="projects"&gt;
+      &lt;h2 class="projects-title"&gt;Some of my Recent Projects&lt;/h2&gt;
+      &lt;div class="projects-container"&gt;
+        &lt;div class="project-container project-card"&gt;
+          &lt;img
+            src="assets/images/expenseTracker.png"
+            alt="expense-tracker"
+            loading="lazy"
+            class="project-pic"
+          /&gt;
+          &lt;h3 class="project-title"&gt;Expense Tracker&lt;/h3&gt;
+          &lt;p class="project-details"&gt;
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          &lt;/p&gt;
+          &lt;a href="#" target="_blank" class="project-link"&gt;Check it Out&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="project-container project-card"&gt;
+          &lt;img
+            src="assets/images/netflixClone.png"
+            alt="netflic-clone"
+            loading="lazy"
+            class="project-pic"
+          /&gt;
+          &lt;h3 class="project-title"&gt;Netflix Clone&lt;/h3&gt;
+          &lt;p class="project-details"&gt;
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          &lt;/p&gt;
+          &lt;a href="#" target="_blank" class="project-link"&gt;Check it Out&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="project-container project-card"&gt;
+          &lt;img
+            src="assets/images/greenyEarth.png"
+            alt="greeny-earth"
+            loading="lazy"
+            class="project-pic"
+          /&gt;
+          &lt;h3 class="project-title"&gt;Greeny Earth&lt;/h3&gt;
+          &lt;p class="project-details"&gt;
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
+            ratione vel inventore labore commodi modi quos culpa aut saepe!
+            Alias!
+          &lt;/p&gt;
+          &lt;a href="#" target="_blank" class="project-link"&gt;Check it Out&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+</code></pre>
+<p>Looking at the HTML, there are three projects in total, all in their individual divs with the class name of project-container and project-card. These class names will be instrumental in styling the projects consistently.</p>
+<p>The containing section element itself has a class of projects, and an id attribute of projects as well. The class name is for styling, and the id is for linking it to the Projects link on the navbar.</p>
+<p>The projects have their individual images with the class name of <code>project-pic</code>, their titles with a class of <code>project-title</code>, more details with the class name of <code>project-details</code>, and links with the class name of <code>project-link</code>.</p>
+<p>The sole purpose of giving all of them unique class names is to style them.</p>
+<p>These are a few of the projects I worked on myself when I was starting out as a developer.</p>
+<p>The projects section looks like this in the browser:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/projects-unstyled.gif" alt="projects-unstyled" width="600" height="359" loading="lazy"></p>
+<p>The section doesn’t look good yet, though – there is even an annoying horizontal scrollbar caused by the images. So we have a lot to do with CSS.</p>
+<h3 id="howtostyletheprojectsection">How to Style the Project Section</h3>
+<p>First of all, I will give the whole section a background color by setting the greyish color (--bg-color) we declared in the CSS variables as the value.</p>
+<p>I will also reduce the width and height of the project images by usung the <code>project-pic</code> class. Then I'll use Flexbox to put the projects side by side.</p>
+<pre><code class="language-css">.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</code></pre>
+<p>The section looks a lot better:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss13Edited.jpg" alt="ss13Edited" width="600" height="400" loading="lazy"></p>
+<p>The images now look better, but the project title, project details, and project links need to be aligned nicely within their individual containers.</p>
+<p>The whole project section also needs to be pushed to the center. You don’t need Flexbox to do this, though – it can be done by setting the text align property to the value of center:</p>
+<pre><code class="language-css">.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+</code></pre>
+<p>Notice that I also set a width of <code>21.875rem (350 pixels)</code> for the individual project containers. This will push them apart from the sides for a better user experience. In this case, the user would not need to look all the way across before they see everything.</p>
+<p>The section now looks better:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss14.png" alt="ss14" width="600" height="400" loading="lazy"></p>
+<p>We can still make this section better. The project titles, project details and project links look chunked together, so we should add some padding and margins.</p>
+<p>The individual project containers also need to look more distinct. The <code>box-shadow</code> property will be instrumental here again, so I’m putting them in their individual cards.</p>
+<pre><code class="language-css">.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+</code></pre>
+<p>The project section looks way better now:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss15.png" alt="ss15" width="600" height="400" loading="lazy"></p>
+<h3 id="howtobuildthecontactsection">How to Build the Contact Section</h3>
+<p>If a potential employer or client finds your portfolio website attractive, they might want to contact you. So you'll want to have a contact form in this section, alongside links to your social media profiles.</p>
+<p>The HTML for this section looks like this:</p>
+<pre><code class="language-html">&lt;section class="contact" id="contact"&gt;
+      &lt;h2&gt;Get In Touch With Me&lt;/h2&gt;
+      &lt;div class="contact-form-container"&gt;
+        &lt;div class="contact-form"&gt;
+          &lt;form action="https://formspree.io/f/xyylngw" method="POST"&gt;
+            &lt;div class="form-control"&gt;
+              &lt;label for="name"&gt;Name&lt;/label&gt;
+              &lt;input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Enter Your Name"
+                class="input-field"
+                required
+              /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-control"&gt;
+              &lt;label for="email"&gt;Email&lt;/label&gt;
+              &lt;input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Enter Your Email"
+                class="input-field"
+                required
+              /&gt;
+            &lt;/div&gt;
+            &lt;div class="form-control"&gt;
+              &lt;label for="message"&gt;Message&lt;/label&gt;
+              &lt;textarea
+                id="message"
+                cols="60"
+                rows="10"
+                placeholder="Enter Your Message"
+                name="message"
+                class="input-field"
+                required
+              &gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            &lt;input
+              type="submit"
+              value="Submit"
+              id="submit-btn"
+              class="submit-btn"
+            /&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+</code></pre>
+<p>Here we've built a contact form with input fields for name and email, a <code>textarea</code> so people can enter the message to be sent, and a submit button for submitting the message so you can see it.</p>
+<p>If you take a good look at the form element, you’ll see I have an action attribute set to a URL from Formspree. This is what I chose for the form submission. With Formspree, you can get the message directly in your email inbox without having to set up a server with complex PHP or JavaScript.</p>
+<p>Note that you can't use my URL – it won't work for you. You can easily setup your own on the Formspree website for free. I also attached a resource on how to set up Formspree to the readme file of the project.</p>
+<p>I have set some <code>id</code> and <code>class</code> attributes for the individual inputs to style them. There is also a <code>name</code> attribute for all the input fields. This is required by the Formspree form submission service.</p>
+<p>To get a basic validation, I attached a <code>required</code> attribute, so the form refuses to submit if the user leaves any of the input fields unfilled.</p>
+<h3 id="howtostylethecontactsection">How to Style the Contact Section</h3>
+<p>Without styling, the contact section doesn’t look good at all:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss16Edited.jpg" alt="ss16Edited" width="600" height="400" loading="lazy"></p>
+<p>All I will do in the CSS is align the whole content to the center and make the input fields look better.</p>
+<p>With the text align and margin properties, you can align the h2 and the container for the contact form to the center.</p>
+<p>I will also put the whole form in a card with the <code>box-shadow</code> property.</p>
+<pre><code class="language-css">.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+</code></pre>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss17.png" alt="ss17" width="600" height="400" loading="lazy"></p>
+<p>The input fields, textarea, labels and placeholders definitely need some styling as well to help with alignment and clarity:</p>
+<pre><code class="language-css">.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+</code></pre>
+<p>The form looks better now: <img src="https://www.freecodecamp.org/news/content/images/2021/10/ss18.png" alt="ss18" width="600" height="400" loading="lazy"></p>
+<p>But the placeholders are not consistent with the labels. So we need to give it a color and some padding. I will be giving it the primary color set in the CSS variable lists.</p>
+<p>To select the placeholders for styling, you can use the placeholder pseudo-class:</p>
+<pre><code class="language-css">.input-field::placeholder {
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+</code></pre>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss19.png" alt="ss19" width="600" height="400" loading="lazy"></p>
+<p>In the contact form, the only thing left is to style the button. Buttons are quite easy to style:</p>
+<pre><code class="language-css">.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+</code></pre>
+<p>In the CSS code snippet above, I made the button go all the way across in the form container by giving it a width of 100%. I also made it more visible with some padding, a margin, a border, and a bolder font weight.</p>
+<p>The <code>border-radius</code> property with a value of 5px removes the sharp edges and the transition serves to slow things down a little when the button is in the hover state.</p>
+<p>The hover state is defined in the CSS code snippet below:</p>
+<pre><code class="language-css">.submit-btn:hover {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+</code></pre>
+<p>The form looks much better now:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/contact-form-hover-effect.gif" alt="contact-form-hover-effect" width="600" height="400" loading="lazy"></p>
+<p>Remember that having your social media links in your portfolio website is a plus for anyone who might want to contact you. That’s the next thing we are going to do, and we are going to do it in a unique way.</p>
+<p>The HTML for the social buttons is in the code snippet below:</p>
+<pre><code class="language-html">    &lt;div class="socials"&gt;
+      &lt;a href="#" target="_blank"
+        &gt;&lt;img
+          src="assets/icons/icons8-twitter-circled.gif"
+          alt="Twitter"
+          loading="lazy"
+          class="socicon"
+      /&gt;&lt;/a&gt;
+      &lt;a href="#" target="_blank"
+        &gt;&lt;img
+          src="assets/icons/icons8-instagram.gif"
+          alt="Instagram"
+          loading="lazy"
+          class="socicon"
+      /&gt;&lt;/a&gt;
+      &lt;a href="#" target="_blank"
+        &gt;&lt;img
+          src="assets/icons/icons8-linkedin-circled.gif"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"
+      /&gt;&lt;/a&gt;
+      &lt;a href="#" target="_blank"
+        &gt;&lt;img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+      /&gt;&lt;/a&gt;
+</code></pre>
+<p>The social icons I chose are animated gif icons from icons8. I put all of them in a container with the class of <code>socials</code>, and gave them an individual class of <code>socicon</code> for styling.</p>
+<p>Take a look at some animated social media icons winking at you below:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/animated-social-icons.gif" alt="animated-social-icons" width="600" height="400" loading="lazy"></p>
+<h3 id="howtostylethesocialicons">How to Style the Social Icons</h3>
+<pre><code class="language-css">.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
+</code></pre>
+<p>With the CSS above, the social icons will be fixed to the right on the web page, so anyone who visits the website sees them no matter where they scroll.</p>
+<p>I also reduced the size of the icons by assigning them all reduced <code>width</code> and <code>height</code> property values.<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/good-icons.gif" alt="good-icons" width="600" height="400" loading="lazy"></p>
+<p>Look at that!</p>
+<p>The only thing left to do is the footer. There’s nothing complex in the footer HTML and CSS apart from the reserved character entity for copyright symbol and heart:</p>
+<pre><code class="language-html">&lt;footer&gt;
+      &lt;p class="copy"&gt;&amp;copy; Copyright 2021&lt;/p&gt;
+      &lt;p class="copy"&gt;
+        Built with &amp;#x2661; by
+        &lt;a href="https://twitter.com/koladechris" target="_blank"
+          &gt;Kolade Chris (Ksound)&lt;/a
+        &gt;
+      &lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="language-css">footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+</code></pre>
+<p>We now have a full-fledged portfolio website!<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/full-fledged-portfolio.gif" alt="full-fledged-portfolio" width="600" height="400" loading="lazy"></p>
+<p>But we need to make it responsive, because it doesn’t look good on smaller devices:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/unresponsive-portfolio.gif" alt="unresponsive-portfolio" width="600" height="400" loading="lazy"></p>
+<p>We need to make all the content of the individual sections display on section on top of the another (in a column layout). We can do this pretty easily with media queries and Flexbox.</p>
+<p>Before adding the media queries for responsiveness, lets implement a scroll-to-top button with HTML, CSS, and JavaScript.</p>
+<h2 id="howtoaddthescrolltotopbutton">How to Add the Scroll to Top Button</h2>
+<h3 id="thehtmlforthescrolltotopbutton">The HTML for the Scroll to Top Button</h3>
+<p>For the HTML, I got an animated icon from Icons8 and decided to put it in an i tag.</p>
+<p>The i tag has a class of <code>scroll-up</code> for styling and an id of <code>scroll-up</code> for selecting it with JavaScript. This is because in my projects, I like to use classes for styling and ids for JavaScript functionalities.</p>
+<pre><code class="language-html">  &lt;i class="scroll-up" id="scroll-up"
+      &gt;&lt;img
+        src="assets/icons/icons8-upward-arrow.gif"
+        class="socicon up-arrow"
+        alt="scroll-up"
+    /&gt;&lt;/i&gt;
+</code></pre>
+<h3 id="howtostylethescrolltotopicon">How to Style the Scroll to Top Icon</h3>
+<p>I will make the scroll-to-top icon fixed just like the social icons. I'll also give it a cursor property of pointer, so the cursor changes when the user hovers on it.</p>
+<p>With the class of up-arrow attached to the scroll-to-top icon, I will also increase the size of the icon for visibility:</p>
+<pre><code class="language-css">.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+</code></pre>
+<p>The icon looks good:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/scroll-up-first.gif" alt="scroll-up-first" width="600" height="400" loading="lazy"></p>
+<p>But it doesn’t do anything yet. So we need to make it functional with a few lines of JavaScript:</p>
+<pre><code class="language-js">// scroll to top functionality
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () =&gt; {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+</code></pre>
+<p><strong>What is the script above doing?</strong></p>
+<p>The first line selects the scroll-to-top button with the id attribute attached to it in the HTML. We used the <code>querySelector()</code> method here. You can also use the <code>getElementById()</code> method.</p>
+<p>In the remaining lines, I used the click <code>eventListener</code> to get the user’s click action and exploit the <code>scrollTo</code> part of the windows object to make the button functional.</p>
+<p>With this functionality, when the user clicks on the scroll-to-top button, the page scrolls to the top and left side of the website smoothly. I did this by setting top to <code>0</code>, left to <code>0</code>, and behavior to <code>smooth</code>.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/scroll-up.gif" alt="scroll-up" width="600" height="400" loading="lazy"></p>
+<p>You can learn more about the windows object by opening up your browser’s developer tools console. Type in window and hit enter, then you see everything available in the windows object, like I did below:</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/window-object.gif" alt="window-object" width="600" height="353" loading="lazy"></p>
+<h2 id="howtomakeyourportfoliowebsiteresponsive">How to Make Your Portfolio Website Responsive</h2>
+<p>To make the website responsive, we will be using CSS media queries and Flexbox.</p>
+<p>First, we'll need to make the images and text look smaller, and then we'll make the content of each section display in a vertical layout by setting the <code>flex-direction</code> to column.</p>
+<p>In the media query, I will be using 2 breakpoints – <code>720px</code> and <code>420px</code>.</p>
+<p>The 720px breakpoint is for tablets and mobile phones, and 420px is for small phones like an iPhone 6, and small Android phones.</p>
+<p>Media query Breakpoints are the points at which you want the content of a website to respond according to the width of a device. So, any code put under the 720px breakpoint reflects on devices with a screen less than or more than 720px, depending on whether you specify max-width or min-width.</p>
+<p>In the case of a max-width of <code>720px</code>, the media query syntax looks like this:</p>
+<pre><code class="language-css">@media screen and (max-width: 720px) {
+  /*changes reflects on screen with a width of 720px and below*/
+}
+</code></pre>
+<h3 id="howtocreatethemediaqueryfortabletsandmobilephonesmaxwidth720px">How to Create the Media Query for Tablets and Mobile Phones (max-width 720px)</h3>
+<p>We will start making the website responsive right from the navbar, because the navbar doesn’t look good on smaller devices.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss21.png" alt="ss21" width="600" height="400" loading="lazy"></p>
+<p>First, I’m going to reduce the padding of the navbar so the <code>h1</code> logo and nav menu items fit in nicely:</p>
+<pre><code class="language-css">nav {
+    padding: 1.5rem 1rem;
+  }
+</code></pre>
+<p>Things now look a bit better:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss22.png" alt="ss22" width="600" height="400" loading="lazy"></p>
+<p>On small devices, the nav menu items need to be on top of one another, and they need to be hidden. So, its time to update the code so the hamburger menu is initially hidden.</p>
+<h3 id="howtobuildthehamburgermenu">How to Build the Hamburger Menu</h3>
+<p>To make the hamburger menu, we need to take the nav menu items out of the viewport. Then we need to set a class of <code>show</code> on the nav list items that will be toggled with few lines of JavaScript (remember the nav items are in an unordered list).</p>
+<pre><code class="language-css"> nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+</code></pre>
+<p>In the CSS code snippet above, I set a position of fixed on the unordered list (<code>ul</code>) to make it float on the screen. I also pushed it down 86px from the top with <code>top: 86px</code>, and 10% to the left.</p>
+<p>I gave it a width of 80% of its parent (the nav element from the HTML), pushed it to the center with <code>text-align: center</code>, and finally hid it with the transform property set to <code>translateX(120%)</code>. This will push it to the right and force it out of the viewport.</p>
+<p>And now, when the user clicks to show the nav items, they all slide in from the right. Awesome.</p>
+<p>If you want the nav menu items to slide in from the left, change the <code>transform</code> property value to <code> transform: translateX(-120%)</code> (this is the direct opposite of <code> transform: translateX(120%)</code>). It's as easy as that, depending on your preference.</p>
+<p>I also assigned a margin of 8px to the nav items to give them more space.</p>
+<p>The navbar now looks like this:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss22-1.png" alt="ss22-1" width="600" height="400" loading="lazy"></p>
+<p>The hamburger menu bar remains hidden. So we need to show it by giving it a display of block, setting a class of show to translate on the x-axis to 0 in order to show it, and then toggle it with JavaScript.</p>
+<pre><code class="language-css"> .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+</code></pre>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss24.png" alt="ss24" width="600" height="400" loading="lazy"></p>
+<p>Our hamburger menu bars now gets shown, but the nav items remain hidden. To show it, we need to toggle the show class on and off with JavaScript.</p>
+<h3 id="thejavascriptforthehamburgermenu">The JavaScript for the Hamburger Menu</h3>
+<p>To toggle the navbar nav menu items on and off with JavaScript, we first need to select all relevant items of the navbar and store them in some variables:</p>
+<pre><code class="language-js">// Nav hamburgerburger selections
+
+const burger = document.querySelector("#burger-menu");
+const ul = document.querySelector("nav ul");
+const nav = document.querySelector("nav");
+</code></pre>
+<ul>
+<li>The <code>burger</code> variable select the hamburger menu bars</li>
+<li>The <code>ul</code> variable selects the list items (the nav links altogether)</li>
+<li>The <code>nav</code> variable selects the container itself (the nav element)</li>
+</ul>
+<p>What we need to do next is toggle the <code>nav ul.show</code> class when the user clicks the hamburger menu bar. We'll do this by adding a click <code>eventListener</code> to the hamburger menu bar, and then using the toggle method to remove and add the class of <code>show</code>.</p>
+<p>Remember that we selected it and stored it in a variable called <code>burger</code>.</p>
+<pre><code class="language-js">burger.addEventListener("click", () =&gt; {
+  ul.classList.toggle("show");
+});
+</code></pre>
+<p>Our nav items can now be toggled on and off:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/nav-toggling-quirk.gif" alt="nav-toggling-quirk" width="502" height="748" loading="lazy"></p>
+<p>But there is a problem – the mobile nav is not hidden any time any of the nav item links are clicked. So we need to remove the class of nav ul.show when any of the nav item links are clicked.</p>
+<p>We can do this with a few lines of JavaScript too:</p>
+<pre><code class="language-js">// Close hamburger menu when a link is clicked
+
+// Select nav links
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((link) =&gt;
+  link.addEventListener("click", () =&gt; {
+    ul.classList.remove("show");
+  })
+);
+</code></pre>
+<p>Remember that the nav links have a class of <code>nav-link</code> from the HTML. So I selected all of them with that class and put them in a variable called navLink. We did this with the <code>querySelectorAll(</code>) method.</p>
+<p>I then looped through all the links with the <code>forEach</code> array method and listened for a click event on all of them. Then I used the <code>remove()</code> method provided by the DOM to remove the class of <code>show</code> any time any of the nav menu items are clicked. This will take all the list items out of the viewport.</p>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/nav-toggling-quirk-fixed.gif" alt="nav-toggling-quirk-fixed" width="600" height="400" loading="lazy"></p>
+<p>Look at that!</p>
+<p>That’s a lot of work. With what we just covered you can make a hamburger menu for any website.</p>
+<h3 id="howtomaketheherosectionresponsive">How to Make the Hero Section Responsive</h3>
+<p>The hero section doesn't look that great at the moment:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss25.png" alt="ss25" width="600" height="400" loading="lazy"></p>
+<p>All we need to do is give it a flex direction of column in the media query, reduce the width and height of Jane Doe's image, and make the About Me text (bio text) readable.</p>
+<pre><code class="language-css">.hero {
+    margin-top: -4rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .hero img {
+        height: 37.5rem;
+        width: 30rem;
+    }
+
+  .bio {
+    margin-top: -7rem;
+    width: 20.5rem;
+  }
+</code></pre>
+<p>The hero section looks better now:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss26.png" alt="ss26" width="600" height="400" loading="lazy"></p>
+<h3 id="howtomakethemoreaboutmesectionresponsive">How to Make the More About Me Section Responsive</h3>
+<p>The More About Me section doesn’t look bad, but we can certainly improve it:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss27.png" alt="ss27" width="600" height="400" loading="lazy"></p>
+<p>I have the following CSS to make it readable and more presentable:</p>
+<pre><code class="language-css"> .more-about {
+    margin-top: 2rem;
+    padding: 1rem 3.5rem;
+  }
+
+  .more-about h2 {
+    text-align: center;
+  }
+
+  .more-about p {
+    text-align: justify;
+  }
+</code></pre>
+<p>I pushed the whole section down a little bit and increased the padding on all sides, aligned the <code>h2</code> to center, and justified the text.<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss28.png" alt="ss28" width="600" height="400" loading="lazy"></p>
+<h3 id="howtomaketheskillssectionresponsive">How to Make the Skills Section Responsive</h3>
+<p>The skill icons appear too big:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss29.png" alt="ss29" width="600" height="400" loading="lazy"></p>
+<p>All we need to do in the media query is reduce the sizes of the icons with the width and height properties:</p>
+<pre><code class="language-css">.icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+</code></pre>
+<p><img src="https://www.freecodecamp.org/news/content/images/2021/10/ss30.png" alt="ss30" width="600" height="400" loading="lazy"></p>
+<h3 id="howtomaketheprojectssectionresponsive">How to Make the Projects Section Responsive</h3>
+<p>In the projects section, we need to make the three projects stack on top of one another by setting the flex direction to column. I will also reduce the width of the individual containers a little bit.</p>
+<pre><code class="language-css"> .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+</code></pre>
+<h3 id="howtomakethecontactformresponsive">How to Make the Contact Form Responsive</h3>
+<p>The width of the contact form needs to be reduced to push it away from the sides and make sure that the fixed social media icons are not on top of it.</p>
+<p>All we need to do is set a maximum width:</p>
+<pre><code class="language-css"> .contact-form-container {
+    max-width: 23.75rem;
+  }
+</code></pre>
+<p>The contact form now looks better:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/ss32.png" alt="ss32" width="600" height="400" loading="lazy"></p>
+<h3 id="howtomakethewebsiteresponsiveonsmallphones">How to Make the Website Responsive on Small Phones</h3>
+<p>On small phones such as the iPhone 6, 7, and 8 plus, the social icons and scroll-to-top icon are not showing. There is also a horizontal scrollbar.<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/smaller-phones-responive-quirks.gif" alt="smaller-phones-responive-quirks" width="600" height="400" loading="lazy"></p>
+<p>To fix these quirks, I will be adding some media queries at the 420px breakpoint:</p>
+<pre><code class="language-css">@media screen and (max-width: 420px) {
+  .hero img {
+    height: 37.5rem;
+    width: 23rem;
+  }
+
+  .bio {
+    width: 18.3rem;
+  }
+
+  .project-container {
+    width: 17.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 17.75rem;
+  }
+} 
+</code></pre>
+<p>I reduced the size of our Jane Doe image, and also reduced the width of the bio text (About Me text), the project container, and the contact form container as well.</p>
+<p>All these changes will make the icons fixed to the right side of the website show – the social media and scroll-to-top icons.<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/smaller-phones-responsiveness-quirk-fixed.gif" alt="smaller-phones-responsiveness-quirk-fixed" width="218" height="384" loading="lazy"></p>
+<p>Everything now looks good:<br>
+<img src="https://www.freecodecamp.org/news/content/images/2021/10/fully-responsive.gif" alt="fully-responsive" width="600" height="400" loading="lazy"></p>
+<p>That’s the end of it all. We have a fully responsive portfolio website.</p>
+<p>You can download the finished version as a zip file from this <a href="https://github.com/Ksound22/developer-portfolio">GitHub repo</a>.</p>
+<p>You can also check out the <a href="https://eager-williams-af0d00.netlify.app/?">live demo</a> of the portfolio website as well. It has a readme that contains information about the tools I used, and how you can customize the website.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this tutorial, you learned what a developer portfolio website is and why you should have one.</p>
+<p>You also learned how to make a fully responsive portfolio website with HTML, CSS, and JavaScript.</p>
+<p>The different parts of this tutorial are each small projects that, when combined, turn into a giant one-page website. For example, you can make card design, a responsive menu bar, a functional contact form, and a scroll-to-top button as the tutorial covers them all.</p>
+<p>Feel free to customize the website to your taste.</p>
+<p>If you find this tutorial useful, you can share it with your friends and family. I would really appreciate that.</p>
+<!--kg-card-end: markdown-->
+
+                        </section>
+                        
+                            <div class="sidebar">
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                                    <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                                
+                            </div>
+                        
+                    </div>
+                    <hr />
+                    
+                        <div class="post-full-author-header" data-test-label="author-header-with-bio">
+                            
+                                
+    
+    
+    
+
+    <section class="author-card" data-test-label="author-card">
+        
+            
+    <img
+      srcset="https://www.freecodecamp.org/news/content/images/size/w60/2023/01/kolade-recent.jpg 60w"
+      sizes="60px"
+      src="https://www.freecodecamp.org/news/content/images/size/w60/2023/01/kolade-recent.jpg"
+      class="author-profile-image"
+      alt="Kolade Chris"
+      width="400"
+      height="400"
+      onerror="this.style.display='none'"
+      loading="lazy"
+      data-test-label="profile-image"
+    />
+  
+        
+
+        <section class="author-card-content ">
+            <span class="author-card-name">
+                <a href="/news/author/kolade/" data-test-label="profile-link">
+                    
+                        Kolade Chris
+                    
+                </a>
+            </span>
+            
+                
+                    <p data-test-label="author-bio">Web developer and technical writer focusing on frontend technologies.</p>
+                
+            
+        </section>
+    </section>
+
+                            
+                        </div>
+                        <hr />
+                    
+
+                    
+                    
+                        
+    
+
+
+<p data-test-label="social-row-cta" class="social-row">
+    If you read this far, tweet to the author to show them you care. <button id="tweet-btn" class="cta-button" data-test-label="tweet-button">Tweet a thanks</button>
+</p>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",(()=>{const t=document.getElementById("tweet-btn"),e=window.location,o="How%20to%20Build%20Your%20Own%20Developer%20Portfolio%20Website%20with%20HTML%2C%20CSS%2C%20and%20JavaScript".replace(/&#39;/g,"%27"),n="",i="@ksound22",r=Boolean("");let l;if(r&&(n||i)){const t={originalPostAuthor:"",currentPostAuthor:"Kolade Chris"};l=encodeURIComponent(`Thank you ${n||t.originalPostAuthor} for writing this helpful article, and ${i||t.currentPostAuthor} for translating it.`)}else!r&&i&&(l=encodeURIComponent(`Thank you ${i} for writing this helpful article.`));const a=`window.open(\n    '${l?`https://twitter.com/intent/tweet?text=${l}%0A%0A${o}%0A%0A${e}`:`https://twitter.com/intent/tweet?text=${o}%0A%0A${e}`}',\n    'share-twitter',\n    'width=550, height=235'\n  ); return false;`;t.setAttribute("onclick",a)}));</script>
+
+
+                        
+
+<div class="learn-cta-row" data-test-label="learn-cta-row">
+    <p>
+        Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. <a href="https://www.freecodecamp.org/learn/" class="cta-button" id="learn-to-code-cta" rel="noopener noreferrer" target="_blank">Get started</a>
+    </p>
+</div>
+
+                    
+                </section>
+                
+                    <div class="banner-ad bottom">
+                        <div class="ad-wrapper" data-test-label="ad-wrapper">
+    
+    <div class="ad-text" data-test-label="ad-text">ADVERTISEMENT</div>
+    <ins
+        class="adsbygoogle"
+        style="display: block; height: 280px;"
+        data-ad-client="ca-pub-9482786369113753"
+        data-ad-slot="5720086888"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+    ></ins>
+    <script>
+        if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+                    </div>
+                
+            </article>
+        </div>
+    </main>
+
+
+            
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-desc-col">
+                <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+                <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.</p>
+                <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+                <p class="footer-donation" data-test-label="donate-text">
+                    You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank" >make a tax-deductible donation here</a>.
+                </p>
+            </div>
+            <div class="trending-guides" data-test-label="trending-guides">
+                <div class="col-header">Trending Guides</div>
+                <div class="trending-guides-row">
+                    <div class="footer-col footer-col-1">
+                        <a href="https://www.freecodecamp.org/news/javascript-string-comparison-how-to-compare-strings-in-js/" rel="noopener noreferrer" target="_blank">Compare Strings in JS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-a-dns-server/" rel="noopener noreferrer" target="_blank">What is a DNS Server?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/object-object-in-javascript-meaning-in-js/" rel="noopener noreferrer" target="_blank">[object, object] in JS
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-become-a-frontend-developer/" rel="noopener noreferrer" target="_blank">Become a Front End Dev
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-a-domain-name-example/" rel="noopener noreferrer" target="_blank">What is a Domain Name?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/binary-search-in-python-with-examples/" rel="noopener noreferrer" target="_blank">Binary Search in Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/getline-in-cpp-cin-getline-function-example/" rel="noopener noreferrer" target="_blank">C++ getline() function
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-else-if-statement-example/" rel="noopener noreferrer" target="_blank">Python Else-If Statement
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-check-if-an-object-has-a-key-in-javascript/" rel="noopener noreferrer" target="_blank">JavaScript Key in Object
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-call-a-function-in-python-def-syntax-example/" rel="noopener noreferrer" target="_blank">Call a Function in Python
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-2">
+                        <a href="https://www.freecodecamp.org/news/html-symbols-html-icon-and-entity-code-list/" rel="noopener noreferrer" target="_blank">HTML Symbols
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/what-is-ftp-file-transfer-protocol-and-ftp-server-meaning/" rel="noopener noreferrer" target="_blank">What is FTP?
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-find-how-to-search-for-a-substring-in-a-string/" rel="noopener noreferrer" target="_blank">Python find()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-learn-the-c-programming-language/" rel="noopener noreferrer" target="_blank">How to Learn C++
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/if-statement-in-c-how-to-use-if-else-statements-in-the-c-programming-language/" rel="noopener noreferrer" target="_blank">If Statement in C
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-attributes-class-and-instance-attribute-examples/" rel="noopener noreferrer" target="_blank">Python Attributes
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/strftime-python-datetime-timestamp-string/" rel="noopener noreferrer" target="_blank">Python strftime()
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/how-to-learn-python/" rel="noopener noreferrer" target="_blank">How to Learn Python
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/python-list-sorting-how-to-order-lists-in-python/" rel="noopener noreferrer" target="_blank">Python List Sorting
+                        </a>
+                        <a href="https://www.freecodecamp.org/news/while-loops-in-python-while-true-loop-statement-example/" rel="noopener noreferrer" target="_blank">While Loops in Python
+                        </a>
+                    </div>
+                    <div class="footer-col footer-col-3">
+                        <div class="footer-left">
+                            <a href="https://www.freecodecamp.org/news/how-to-save-and-exit-nano-in-terminal-nano-quit-command/" rel="noopener noreferrer" target="_blank">How to Save and Exit Nano
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/react-interview-questions-and-answers/" rel="noopener noreferrer" target="_blank">React Interview Questions
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/google-docs-strikethrough-how-to-cross-out-text-in-google-docs/" rel="noopener noreferrer" target="_blank">Google Docs Strikethrough
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/java-random-number-generator-how-to-generate-with-math-random-and-convert-to-integer/" rel="noopener noreferrer" target="_blank">Make Random Number Java
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-use-vlookup-in-excel/" rel="noopener noreferrer" target="_blank">How to Use VLOOKUP in Excel
+                            </a>
+                        </div>
+
+                        <div class="footer-right">
+                            <a href="https://www.freecodecamp.org/news/how-to-iterate-over-objects-in-javascript/" rel="noopener noreferrer" target="_blank">Loop Through an Object in JS
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/what-does-double-slash-mean-in-python/" rel="noopener noreferrer" target="_blank">What Does // Mean in Python?
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/charat-in-java-how-to-use-the-java-charat-method-2/" rel="noopener noreferrer" target="_blank">How to Use the Java charAt()
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/how-to-center-a-div-with-css/" rel="noopener noreferrer" target="_blank">How to Center a Div with CSS
+                            </a>
+                            <a href="https://www.freecodecamp.org/news/loading-a-json-file-in-python-how-to-read-and-parse-json/" rel="noopener noreferrer" target="_blank">Loading JSON in Python
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='footer-bottom'>
+            <div class="col-header" data-test-label="our-nonprofit">Our Charity</div>
+            <div class="footer-divider"></div>
+            <div class="our-nonprofit">
+                <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                    About
+                </a>
+                <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                    Alumni Network
+                </a>
+                <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                    Open Source
+                </a>
+                <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                    Shop
+                </a>
+                <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                    Support
+                </a>
+                <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                    Sponsors
+                </a>
+                <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                    Academic Honesty
+                </a>
+                <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                    Code of Conduct
+                </a>
+                <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                    Privacy Policy
+                </a>
+                <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                    Terms of Service
+                </a>
+                <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                    Copyright Policy
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+        
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"78898ec6bc8eb78e","token":"bdb993c6dde44e178aabd9555e75e4f4","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
