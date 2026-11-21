@@ -1,36 +1,103 @@
-<!DOCTYPE html>
-<html>
-    <head> 
-        <title>MY WEBSITE CLASS</title>
-    </head>
-    <body>
-        <a href="Page2.html" title="This takes you to Google">
-        <img src="1.jpg - Copy.jpg" height="500" width="500" alt="this is a picture of nigeria" title="NIGERIA">
-        </a>
-        <a href="social media.html">greater</a>
-        <audio controls autoplay muted loop>
-            <source src="music.mp3.mp3">
-        </audio>
-        <video autoplay muted loop controls>
-            <source controls src="omp.mp4.mp4">
-        </video>
-        <h4>UNORDERED LIST</h4>
-        <UL>
-            <LI>rice</LI>
-            <LI>bean</LI>
-            <LI>stew</LI>
-        </UL>
-        <H4>ORDERED LIST</H4>
-             <ol type="A">
-                <li>eat breakfast</li>
-                <li>eat breakfast</li>
-                <li>eat breakfast</li>
-             </ol>
-        <H4>DISCRIPTION LIST</H4>
-         <dl>
-            <dt>HTML</dt>
-            <DD>add greater structure</DD>
-         </dl>
-         <iframe src="advertisement.html" width="750" height="250">
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palace Farm</title>
+<style>
+:root{--g:#1f6b3a;--bg:#f6f7f4;--tx:#1d1d1b;--mu:#5a5f57;--card:#fff;--line:#dfe3da;--hi:#b3261e;--me:#b26a00;--lo:#1f6b3a}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--tx);font-size:16px;line-height:1.4}
+header{background:var(--g);color:#fff;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+header h1{font-size:18px;margin:0}
+select,input,textarea,button{font:inherit;padding:10px;border-radius:8px;border:1px solid var(--line);max-width:100%}
+button{background:var(--g);color:#fff;border:0;cursor:pointer;min-height:44px}
+button.alt{background:#fff;color:var(--g);border:1px solid var(--g)}
+main{max-width:760px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:12px}
+label{display:block;margin:10px 0 4px;font-weight:600}
+input,textarea,select{width:100%}
+input[type=checkbox]{width:auto}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tag{display:inline-block;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:700;color:#fff}
+.hi{background:var(--hi)}.me{background:var(--me)}.lo{background:var(--lo)}
+.muted{color:var(--mu);font-size:14px}
+.disc{background:#fff8e1;border:1px solid #f0d27a;padding:10px;border-radius:8px;font-size:14px;margin:8px 0}
+.err{color:var(--hi);font-weight:600}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}
+.alert{background:#fdecea;border:1px solid #f5b5ad;padding:8px 10px;border-radius:8px;margin:4px 0;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Palace Farm</h1>
+  <select id="role" onchange="setRole(this.value)" aria-label="Switch role">
+    <option value="farmer">Farmer</option>
+    <option value="vet">Veterinarian</option>
+    <option value="reception">Reception</option>
+    <option value="admin">Admin</option>
+  </select>
+</header>
+<main id="app"></main>
+<script>
+const SERVICES=[
+ {n:"Animal Health",d:"Vet consultation and treatment advice"},
+ {n:"Feed and Nutrition",d:"Broiler and layer feed planning"},
+ {n:"Farm Construction",d:"Poultry and piggery house design and build"},
+ {n:"Farm Management",d:"Record keeping and farm operations"},
+ {n:"Consulting",d:"Agribusiness advice"}
+];
+const CATS=["Piggery","Poultry","Other Animals"];
+const SUBS=["Viral","Protozoan","Metabolic","Bacterial","Fungal"];
+const S={farmer:null,farmers:[],cases:[],drugs:[],audit:[],tab:"home",sel:null,err:"",msg:"",seq:0};
+let role="farmer";
+const KEY="palacefarm-v1";
+const addDays=(s,n)=>{const t=new Date(s);t.setDate(t.getDate()+n);return t.toISOString().slice(0,10)};
+function save(){try{localStorage.setItem(KEY,JSON.stringify({farmers:S.farmers,farmer:S.farmer,cases:S.cases,drugs:S.drugs,audit:S.audit,seq:S.seq}))}catch(e){}}
+function load(){try{const j=JSON.parse(localStorage.getItem(KEY)||"null");if(j)Object.assign(S,j)}catch(e){}}
+load();
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const today=()=>new Date().toISOString().slice(0,10);
+function log(action,detail){S.audit.push({at:new Date().toISOString(),role,user:role=== "farmer"?(S.farmer?S.farmer.phone:"-"):role,action,detail});}
+function setRole(r){role=r;S.tab=r=== "admin"?"catalogue":"home";S.sel=null;S.err="";S.msg="";render();}
+function go(t){S.tab=t;S.sel=null;S.err="";S.msg="";render();}
+function nav(list){return `<nav>${list.map(([k,l])=>`<button class="${S.tab===k?'':'alt'}" onclick="go('${k}')">${l}</button>`).join("")}</nav>`;}
+function msgBox(){return S.msg?`<div class="card">${esc(S.msg)}</div>`:"";}
+function errBox(){return S.err?`<p class="err">${esc(S.err)}</p>`:"";}
+function tagFor(u){return `<span class="tag ${u=== "high"?"hi":u=== "medium"?"me":"lo"}">${u.toUpperCase()}</span>`;}
+function triage(c){const t=(c.desc||"").toLowerCase();let urg="low";if(c.affected>=10||/dying|dead|died|death|sudden|blood|convuls/.test(t))urg="high";else if(c.affected>=3||c.onset=== "Less than 24 hours")urg="medium";const cat=c.species=== "Pig"?"Piggery":c.species=== "Chicken"?"Poultry":"Other Animals";return {urg,cat,note:"Rule-based placeholder until AI triage is connected. Pending vet sign-off on thresholds."};}
+function farmerView(){if(!S.farmer)return regForm();let body="";if(S.tab=== "case")body=caseForm();else if(S.tab=== "mine")body=mine();else body=home();return nav([["home","Services"],["case","Report a case"],["mine","My cases"]])+msgBox()+body;}
+function home(){return `<div class="card"><h2>Welcome, ${esc(S.farmer.name)}</h2><p class="muted">Services from Palace Agriconsult, Ilesha.</p></div>`+SERVICES.map(s=>`<div class="card"><div class="row"><strong>${esc(s.n)}</strong><button class="alt" onclick="quote('${esc(s.n)}')">Request a quote</button></div><div class="muted">${esc(s.d)}</div></div>`).join("");}
+function quote(n){S.msg=`Quote request for ${n} recorded. Our team will contact you.`;log("quote_request",n);render();}
+function regForm(){return `<div class="card"><h2>Register</h2>${errBox()}<label>Full name</label><input id="f_name"><label>Phone number (11 digits)</label><input id="f_phone" inputmode="tel"><label>LGA in Osun State</label><input id="f_lga"><label>Farm type</label><select id="f_type"><option>Poultry</option><option>Piggery</option><option>Mixed</option></select><label>Main species kept</label><select id="f_species"><option>Chicken</option><option>Pig</option><option>Other</option></select><label>Approximate flock or herd size</label><input id="f_size" type="number" min="0"><p class="muted">Privacy notice: Palace Agriconsult stores your details to provide services. Voice notes, photos, and videos are kept for 12 months.</p><label><input type="checkbox" id="f_consent"> I agree to the privacy notice.</label><p><button onclick="register()">Register</button></p></div>`;}
+function register(){const name=$("f_name").value.trim(),phone=$("f_phone").value.trim();if(!name||!/^0\d{10}$/.test(phone)){S.err="Enter your name and an 11-digit phone number starting with 0.";return render();}if(!$("f_consent").checked){S.err="Consent is required to register.";return render();}S.farmer={name,phone,lga:$("f_lga").value.trim(),farmType:$("f_type").value,species:$("f_species").value,size:$("f_size").value};S.farmers.push(S.farmer);log("register",phone);S.err="";S.tab="home";S.msg="Registered. Welcome to Palace Farm.";render();}
+function caseForm(){return `<div class="card"><h2>Report a case</h2>${errBox()}<label>Species</label><select id="c_species"><option>Chicken</option><option>Pig</option><option>Other</option></select><label>Number of affected animals</label><input id="c_aff" type="number" min="1"><label>When did symptoms start?</label><select id="c_onset"><option>Less than 24 hours</option><option>1 to 3 days</option><option>More than 3 days</option></select><label>Describe the problem</label><textarea id="c_desc" rows="4"></textarea><label>Photos (up to 5)</label><input id="c_photos" type="file" accept="image/*" multiple><label><input type="checkbox" id="c_consent"> I consent to storing these photos for this case.</label><div class="disc">This is not a diagnosis. A veterinarian will review your case. Medicine is only recommended after vet approval.</div><button onclick="submitCase()">Submit case</button></div>`;}
+function submitCase(){const aff=+$("c_aff").value,desc=$("c_desc").value.trim(),files=$("c_photos").files;if(!(aff>0)||!desc){S.err="Enter the number affected and describe the problem.";return render();}if(files.length>5){S.err="Maximum 5 photos.";return render();}if(files.length&&!$("c_consent").checked){S.err="Consent is needed to store photos, or remove them.";return render();}S.seq++;const c={ref:"PF-"+(1000+S.seq),farmer:S.farmer.phone,farmerName:S.farmer.name,species:$("c_species").value,affected:aff,onset:$("c_onset").value,desc,photos:files.length,status:"Awaiting vet review",prescription:null,notes:"",created:Date.now()};c.triage=triage(c);S.cases.push(c);log("case_submitted",c.ref);S.err="";S.tab="mine";S.msg=`Case ${c.ref} submitted. Keep this reference number.`;render();}
+function mine(){const list=S.cases.filter(c=>c.farmer===S.farmer.phone);if(!list.length)return `<div class="card">You have no cases yet.</div>`;return list.slice().reverse().map(c=>{let body=`<p class="muted">Submitted ${new Date(c.created).toLocaleString()}</p><p>Status: <strong>${esc(c.status)}</strong></p>`;if(c.triage.urg=== "high")body+=`<div class="disc"><strong>Urgent:</strong> Isolate the affected animals now and contact the nearest Osun State veterinary office. A vet has been alerted.</div>`;if(c.prescription){const p=c.prescription;body+=`<div class="card"><strong>Vet-approved treatment</strong><p>${esc(p.brand)} (${esc(p.generic)})<br>Dosage: ${esc(p.dosage)}<br>Withdrawal period: ${esc(p.withdrawal)} days<br>Approved by ${esc(p.vet)}, licence ${esc(p.licence)}</p></div>`;}if(c.prescription){body+=c.collected?`<p>Collected ${esc(c.collectedAt)}. Do not sell products from treated animals before ${esc(c.withdrawEnd)}.</p>`:c.paid?`<p>Paid. Bring reference ${esc(c.ref)} to reception for pickup.</p>`:`<p>Waiting for payment at reception.</p>`;}body+=`<div class="disc">This is not a diagnosis. A veterinarian will review your case.</div>`;return `<div class="card"><div class="row"><strong>${esc(c.ref)}</strong>${tagFor(c.triage.urg)}</div>${body}</div>`;}).join("");}
+const RANK={high:0,medium:1,low:2};
+function vetView(){if(S.sel)return vetDetail();const q=S.cases.slice().sort((a,b)=>RANK[a.triage.urg]-RANK[b.triage.urg]||a.created-b.created);const rows=q.length?q.map(c=>`<tr><td>${esc(c.ref)}</td><td>${esc(c.farmerName)}</td><td>${esc(c.species)} (${c.affected})</td><td>${tagFor(c.triage.urg)}</td><td>${esc(c.status)}</td><td><button class="alt" onclick="openCase('${esc(c.ref)}')">Open</button></td></tr>`).join(""):"";return `<div class="card"><h2>Vet review queue</h2>${msgBox()}${q.length?`<table><tr><th>Ref</th><th>Farmer</th><th>Species</th><th>Urgency</th><th>Status</th><th></th></tr>${rows}</table>`:"No cases in the queue."}</div>`;}
+function openCase(ref){S.sel=ref;S.err="";S.msg="";render();}
+function prescribable(d){return !d.withdrawn&&d.expiry>=today()&&d.qty>0;}
+function vetDetail(){const c=S.cases.find(x=>x.ref===S.sel);if(!c){S.sel=null;return vetView();}const opts=S.drugs.filter(d=>d.cat===c.triage.cat&&prescribable(d)).map(d=>`<option value="${esc(d.id)}">${esc(d.brand)} (${esc(d.generic)}) - ${esc(d.sub)}</option>`).join("");return `<div class="card"><button class="alt" onclick="S.sel=null;render()">Back to queue</button><div class="row" style="margin-top:8px"><h2>${esc(c.ref)}</h2>${tagFor(c.triage.urg)}</div><p>Farmer: ${esc(c.farmerName)}, ${esc(c.farmer)}<br>Species: ${esc(c.species)}; affected: ${c.affected}; onset: ${esc(c.onset)}; photos: ${c.photos}</p><p>${esc(c.desc)}</p><div class="disc">Triage: category ${esc(c.triage.cat)}, urgency ${esc(c.triage.urg)}. ${esc(c.triage.note)}</div>${errBox()}<label>Vet notes</label><textarea id="v_notes" rows="3">${esc(c.notes)}</textarea><label>Vet name</label><input id="v_name"><label>Vet licence number</label><input id="v_lic"><label>Prescription (active catalogue, ${esc(c.triage.cat)})</label><select id="v_drug" onchange="showDrug()"><option value="">Select a drug</option>${opts}</select><p id="v_info" class="muted"></p><div class="row"><button onclick="approve()">Approve prescription</button><button class="alt" onclick="saveNotes()">Save notes</button><button class="alt" onclick="reject()">Reject case</button></div></div>`;}
+function showDrug(){const d=S.drugs.find(x=>x.id===$("v_drug").value);$("v_info").textContent=d?`Dosage: ${d.dosage}. Withdrawal period: ${d.withdrawal} days. Source: catalogue entry, checked against label.`:"";}
+function saveNotes(){const c=S.cases.find(x=>x.ref===S.sel);c.notes=$("v_notes").value.trim();log("notes_saved",c.ref);S.msg=`Notes saved for ${c.ref}.`;render();}
+function approve(){const c=S.cases.find(x=>x.ref===S.sel);const name=$("v_name").value.trim(),lic=$("v_lic").value.trim(),id=$("v_drug").value;if(!name||!lic){S.err="Vet name and licence number are required.";return render();}const d=S.drugs.find(x=>x.id===id);if(!d||!prescribable(d)||d.cat!==c.triage.cat){S.err="Select an active drug from the catalogue for this category.";return render();}c.prescription={id:d.id,brand:d.brand,generic:d.generic,dosage:d.dosage,withdrawal:d.withdrawal,vet:name,licence:lic};c.paid=false;c.collected=false;c.withdrawEnd=null;c.status="Approved";c.notes=$("v_notes").value.trim();log("prescription_approved",`${c.ref} ${d.brand} by ${name} (${lic})`);S.sel=null;S.err="";S.msg=`Approved ${c.ref}. Farmer can now see the treatment.`;render();}
+function reject(){const c=S.cases.find(x=>x.ref===S.sel),notes=$("v_notes").value.trim();if(!notes){S.err="Add a reason in vet notes before rejecting.";return render();}c.status="Rejected";c.notes=notes;log("case_rejected",c.ref);S.sel=null;S.err="";S.msg=`${c.ref} rejected. Reason saved.`;render();}
+function drugStatus(d){if(d.withdrawn)return "withdrawn";if(d.expiry<today())return "expired";if(d.qty<=d.reorder)return "low stock";return "active";}
+function adminView(){return nav([["catalogue","Catalogue"],["audit","Audit log"]])+(S.tab=== "audit"?auditView():catalogueView());}
+function catalogueView(){const alerts=S.drugs.flatMap(d=>{const out=[];if(!d.withdrawn&&d.qty<=d.reorder)out.push(`${d.brand}: stock at or below reorder level.`);const days=(new Date(d.expiry)-new Date())/86400000;if(!d.withdrawn&&days>=0&&days<=60)out.push(`${d.brand}: batch ${d.batch} expires within 60 days.`);return out;});const opts=(arr)=>arr.map(x=>`<option>${x}</option>`).join("");const rows=S.drugs.map(d=>`<tr><td>${esc(d.brand)}<br><span class="muted">${esc(d.generic)}</span></td><td>${esc(d.cat)} / ${esc(d.sub)}</td><td>${esc(d.batch)}<br>exp ${esc(d.expiry)}</td><td>${d.qty} / ${d.reorder}</td><td>${drugStatus(d)}</td><td>${d.withdrawn?"":`<button class="alt" onclick="withdraw('${esc(d.id)}')">Withdraw</button>`}</td></tr>`).join("");return `<div class="card"><h2>Add drug to catalogue</h2>${errBox()}<label>Brand name</label><input id="d_brand"><label>Generic name</label><input id="d_generic"><label>Category</label><select id="d_cat">${opts(CATS)}</select><label>Subcategory</label><select id="d_sub">${opts(SUBS)}</select><label>Target species and diseases</label><input id="d_target"><label>Form and strength</label><input id="d_form"><label>Dosage (from label)</label><input id="d_dosage"><label>Withdrawal period (days)</label><input id="d_withdrawal" type="number" min="0"><label>NAFDAC registration number (required)</label><input id="d_nafdac"><label>Batch number</label><input id="d_batch"><label>Manufacture date</label><input id="d_mfg" type="date"><label>Expiry date</label><input id="d_expiry" type="date"><label>Quantity received</label><input id="d_qty" type="number" min="0"><label>Reorder level</label><input id="d_reorder" type="number" min="0"><label>Storage</label><select id="d_storage"><option>Room temperature</option><option>Cold chain</option></select><label>Supplier and purchase order</label><input id="d_supplier"><label><input type="checkbox" id="d_label"> I checked dosage and withdrawal against the product label.</label><p><button onclick="addDrug()">Add to catalogue</button></p></div><div class="card"><div class="row"><h2>Catalogue</h2><button class="alt" onclick="exportCSV()">Export stock CSV</button></div>${alerts.map(a=>`<div class="alert">${esc(a)}</div>`).join("")}${S.drugs.length?`<table><tr><th>Drug</th><th>Category / sub</th><th>Batch</th><th>Qty / reorder</th><th>Status</th><th></th></tr>${rows}</table>`:"No drugs yet."}</div>`;}
+function addDrug(){const v=id=>$(id).value.trim();const d={brand:v("d_brand"),generic:v("d_generic"),cat:v("d_cat"),sub:v("d_sub"),target:v("d_target"),form:v("d_form"),dosage:v("d_dosage"),withdrawal:v("d_withdrawal"),nafdac:v("d_nafdac"),batch:v("d_batch"),mfg:v("d_mfg"),expiry:v("d_expiry"),qty:+v("d_qty"),reorder:+v("d_reorder"),storage:v("d_storage"),supplier:v("d_supplier")};if(!$("d_label").checked){S.err="Confirm that dosage and withdrawal were checked against the label.";return render();}if(!d.brand||!d.dosage||d.withdrawal=== ""||!d.batch||!d.expiry){S.err="Brand, dosage, withdrawal period, batch, and expiry are required.";return render();}if(!d.nafdac){S.err="A drug without a NAFDAC registration number cannot be published.";return render();}if(d.expiry<=today()){S.err="Expiry date must be in the future.";return render();}d.id="D"+(S.drugs.length+1);d.withdrawn=false;S.drugs.push(d);log("drug_added",`${d.id} ${d.brand} batch ${d.batch}`);S.err="";S.msg=`${d.brand} added to the catalogue.`;render();}
+function withdraw(id){const d=S.drugs.find(x=>x.id===id);d.withdrawn=true;log("drug_withdrawn",`${d.id} ${d.brand}`);S.msg=`${d.brand} withdrawn. Hidden from vets and reception.`;render();}
+function auditView(){const rows=S.audit.slice().reverse().slice(0,50).map(a=>`<tr><td>${esc(new Date(a.at).toLocaleString())}</td><td>${esc(a.role)}</td><td>${esc(a.user)}</td><td>${esc(a.action)}</td><td>${esc(a.detail)}</td></tr>`).join("");return `<div class="card"><h2>Audit log</h2>${S.audit.length?`<table><tr><th>Time</th><th>Role</th><th>User</th><th>Action</th><th>Detail</th></tr>${rows}</table>`:"No actions yet."}</div>`;}
+function receptionView(){const q=S.cases.filter(c=>c.prescription&&c.status=== "Approved"&&!c.collected);const body=q.length?q.map(c=>{const p=c.prescription,d=S.drugs.find(x=>x.id===p.id);const action=!c.paid?`<label>Paystack reference</label><input id="pay_${esc(c.ref)}"><p><button onclick="confirmPay('${esc(c.ref)}')">Confirm payment</button></p>`:`<label>Batch number on box</label><input id="bat_${esc(c.ref)}"><label><input type="checkbox" id="box_${esc(c.ref)}"> Pre-packed box checked</label><p><button onclick="collect('${esc(c.ref)}')">Mark collected</button></p>`;return `<div class="card"><div class="row"><strong>${esc(c.ref)}</strong><span class="muted">${esc(c.farmerName)}, ${esc(c.farmer)}</span></div><p>${esc(p.brand)} (${esc(p.generic)}), ${d?"batch "+esc(d.batch):"drug no longer in catalogue"}</p>${action}</div>`;}).join(""):"<div class=\"card\">No pickups waiting.</div>";return msgBox()+errBox()+body;}
+function confirmPay(ref){const c=S.cases.find(x=>x.ref===ref),pr=$("pay_"+ref).value.trim();if(!pr){S.err="Enter the Paystack reference.";return render();}c.paid=true;c.payRef=pr;log("payment_confirmed",`${ref} ${pr}`);S.err="";S.msg=`Payment confirmed for ${ref}.`;render();}
+function collect(ref){const c=S.cases.find(x=>x.ref===ref),d=S.drugs.find(x=>x.id===c.prescription.id);const b=$("bat_"+ref).value.trim(),box=$("box_"+ref).checked;if(!d||d.withdrawn||d.expiry<=today()){S.err="This drug cannot be dispensed (removed, withdrawn, or expired).";return render();}if(b!==d.batch){S.err="Batch number does not match the catalogue batch.";return render();}if(!box){S.err="Confirm the pre-packed box.";return render();}d.qty=Math.max(0,d.qty-1);c.collected=true;c.collectedAt=today();c.withdrawEnd=addDays(today(),+d.withdrawal);log("collected",`${ref} ${d.brand} batch ${d.batch}`);S.err="";S.msg=`${ref} collected. Stock left for ${d.brand}: ${d.qty}.`;render();}
+function exportCSV(){const h=["brand","generic","category","subcategory","batch","expiry","qty","reorder","status"];const rows=S.drugs.map(d=>[d.brand,d.generic,d.cat,d.sub,d.batch,d.expiry,d.qty,d.reorder,drugStatus(d)].map(v=>`"${String(v??"").replace(/"/g,'""')}"`).join(","));const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([[h.join(",")].concat(rows).join("\n")],{type:"text/csv"}));a.download="palace-farm-stock.csv";a.click();log("stock_exported","csv");save();}
+function render(){save();$("role").value=role;$("app").innerHTML=role=== "farmer"?farmerView():role=== "vet"?vetView():role=== "reception"?receptionView():adminView();}
+render();
+</script>
+</body>
 </html>
